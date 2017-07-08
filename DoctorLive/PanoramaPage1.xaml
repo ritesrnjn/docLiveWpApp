@@ -1,0 +1,155 @@
+﻿<phone:PhoneApplicationPage x:Class="DoctorLive.PanoramaPage1"
+                            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                            xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+                            xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+                            xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                            mc:Ignorable="d"
+                            FontFamily="{StaticResource PhoneFontFamilyNormal}"
+                            FontSize="{StaticResource PhoneFontSizeNormal}"
+                            Foreground="{StaticResource PhoneForegroundBrush}"
+                            SupportedOrientations="Portrait"
+                            Orientation="Portrait"
+                            shell:SystemTray.IsVisible="False">
+
+    <!--LayoutRoot contains the root grid where all other page content is placed-->
+    <Grid x:Name="LayoutRoot">
+        <phone:Panorama Title="DoctorLive"
+                        >
+
+            <!--Panorama item one-->
+            <phone:PanoramaItem Header="CaseSheet">
+                <Grid HorizontalAlignment="Left"
+                      Height="377"
+                      Margin="7,31,0,0"
+                      VerticalAlignment="Top"
+                      Width="407">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1.3*" />
+                        <ColumnDefinition Width="2*" />
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Grid.Column="0">
+                        <TextBlock Text="Vitals BP"
+                                   FontSize="25"
+                                   Margin="0,10">
+
+                        </TextBlock>
+                        <TextBlock Text="Vitals Sugar"
+                                   FontSize="25"
+                                   Margin="0,10">
+
+                        </TextBlock>
+
+                        <TextBlock Text="Vitals Temp"
+                                   FontSize="25"
+                                   Margin="0,10">
+
+                        </TextBlock>
+                        <TextBlock FontSize="25"
+                                   Margin="0,10">
+                        	<Run Text="Personal" />
+                        	<LineBreak />
+                        	<Run Text="History" />
+                        </TextBlock>
+
+                    </StackPanel>
+                    <StackPanel Grid.Column="1">
+                        <TextBlock x:Name="vbp"
+                                   FontSize="25"
+                                   Margin="0,10" />
+                        <TextBlock x:Name="vs"
+                                   FontSize="25"
+                                   Margin="0,10" />
+
+                        <TextBlock x:Name="vt"
+                                   FontSize="25"
+                                   Margin="0,10" />
+                        <TextBlock x:Name="ph"
+                                   FontSize="25"
+                                   Margin="0,10"
+                                   Height="179" />
+                    </StackPanel>
+                </Grid>
+            </phone:PanoramaItem>
+
+            <!--Panorama item two-->
+            <phone:PanoramaItem Header="casesheet">
+                <Grid HorizontalAlignment="Left"
+                      Height="377"
+                      Margin="7,31,0,0"
+                      VerticalAlignment="Top"
+                      Width="407">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1.3*" />
+                        <ColumnDefinition Width="2*" />
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Grid.Column="0">
+                        <TextBlock FontSize="25"
+                                   Margin="0,20">
+                        	<Run Text="Examination " />
+                        	<LineBreak />
+                        	<Run Text="Cardio" />
+
+                        </TextBlock>
+                        <TextBlock FontSize="25"
+                                   Margin="0,120,0,20">
+                        	<Run Text="Examination" />
+                        	<LineBreak />
+                        	<Run Text="Respiratory" />
+                        </TextBlock>
+
+                    </StackPanel>
+                    <StackPanel Grid.Column="1">
+                        <TextBlock x:Name="ec"
+                                   FontSize="25"
+                                   Margin="0,10"
+                                   Height="183" />
+                        <TextBlock x:Name="er"
+                                   FontSize="25"
+                                   Margin="0,10"
+                                   Height="164" />
+                    </StackPanel>
+                </Grid>
+            </phone:PanoramaItem>
+
+
+            <phone:PanoramaItem Header="casesheet">
+                <Grid HorizontalAlignment="Left"
+                      Height="377"
+                      Margin="7,31,0,0"
+                      VerticalAlignment="Top"
+                      Width="407">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1.3*" />
+                        <ColumnDefinition Width="2*" />
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Grid.Column="0">
+                        <TextBlock FontSize="25"
+                                   Margin="0,20">
+                        	<Run Text="Examination " />
+                        	<LineBreak />
+                        	<Run Text="abdomen" />
+
+                        </TextBlock>
+                        <TextBlock FontSize="25"
+                                   Margin="0,120,0,20"
+                                   Text="Diagnosis" />
+
+                    </StackPanel>
+                    <StackPanel Grid.Column="1">
+                        <TextBlock x:Name="ea"
+                                   FontSize="25"
+                                   Margin="0,10"
+                                   Height="183" />
+                        <TextBlock x:Name="d"
+                                   FontSize="25"
+                                   Margin="0,10"
+                                   Height="164" />
+                    </StackPanel>
+                </Grid>
+            </phone:PanoramaItem>
+        </phone:Panorama>
+    </Grid>
+
+</phone:PhoneApplicationPage>

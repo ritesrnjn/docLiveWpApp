@@ -1,0 +1,153 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="DoctorLive.Page3"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Text="DoctorLive"
+                       Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock Text="Tests"
+                       Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="4*" />
+                <ColumnDefinition Width="1.5*" />
+            </Grid.ColumnDefinitions>
+            <TextBlock x:Name="tt1"
+                       Grid.Row="0"
+                       
+                       Grid.Column="1"
+                       FontSize="25" />
+            <TextBlock x:Name="tt2"
+                       Grid.Row="1"
+                       Grid.Column="1"
+                       FontSize="25" />
+            <TextBlock x:Name="tt3"
+                       Grid.Row="2"
+                       Grid.Column="1"
+                       FontSize="25" />
+            <TextBlock x:Name="tt4"
+                       Grid.Row="3"
+                       Grid.Column="1"
+                       FontSize="25" />
+            <TextBlock x:Name="tt5"
+                       Grid.Row="4"
+                       Grid.Column="1"
+                       FontSize="25" />
+            <TextBlock x:Name="tt6"
+                       Grid.Row="5"
+                       Grid.Column="1"
+                       FontSize="25" />
+
+
+            <TextBlock Grid.Row="0"
+                       Grid.Column="2"
+                       x:Name="tb1"
+                       FontSize="25"
+                       Foreground="#FF25BF03" />
+            <TextBlock Grid.Row="1"
+                       Grid.Column="2"
+                       x:Name="tb2"
+                       FontSize="25"
+                       Foreground="#FF25BF03" />
+            <TextBlock Grid.Row="2"
+                       Grid.Column="2"
+                       x:Name="tb3"
+                       FontSize="25"
+                       Foreground="#FF25BF03" />
+            <TextBlock Grid.Row="3"
+                       Grid.Column="2"
+                       x:Name="tb4"
+                       FontSize="25"
+                       Foreground="#FF25BF03" />
+            <TextBlock Grid.Row="4"
+                       Grid.Column="2"
+                       x:Name="tb5"
+                       FontSize="25"
+                       Foreground="#FF25BF03" />
+            <TextBlock Grid.Row="5"
+                       Grid.Column="2"
+                       x:Name="tb6"
+                       FontSize="25"
+                       Foreground="#FF25BF03" />
+            <CheckBox x:Name="cb1"
+                      HorizontalAlignment="Left"
+                      VerticalAlignment="Top"
+                      Height="87"
+                      Checked="cb1_Checked"
+                      Unchecked="cb1_Unchecked" />
+            <CheckBox x:Name="cb2"
+                      HorizontalAlignment="Left"
+                      VerticalAlignment="Top"
+                      Height="87"
+                      Grid.Row="1"
+                      Checked="cb2_Checked"
+                      Unchecked="cb2_Unchecked" />
+            <CheckBox x:Name="cb3"
+                      HorizontalAlignment="Left"
+                      VerticalAlignment="Top"
+                      Height="87"
+                      Grid.Row="2"
+                      Checked="cb3_Checked"
+                      Unchecked="cb3_Unchecked" />
+            <CheckBox x:Name="cb4"
+                      HorizontalAlignment="Left"
+                      VerticalAlignment="Top"
+                      Height="87"
+                      Grid.Row="3"
+                      Margin="0,5,0,0"
+                      Grid.RowSpan="2"
+                      Checked="cb4_Checked"
+                      Unchecked="cb4_Unchecked" />
+            <CheckBox x:Name="cb5"
+                      HorizontalAlignment="Left"
+                      VerticalAlignment="Top"
+                      Height="87"
+                      Grid.Row="3"
+                      Margin="0,86,0,0"
+                      Grid.RowSpan="2"
+                      Checked="cb5_Checked"
+                      Unchecked="cb5_Unchecked" />
+            <CheckBox x:Name="cb6"
+                      HorizontalAlignment="Left"
+                      VerticalAlignment="Top"
+                      Height="87"
+                      Grid.Row="5"
+                      Checked="cb6_Checked"
+                      Unchecked="cb6_Unchecked" />
+            
+        </Grid>
+    </Grid>
+
+</phone:PhoneApplicationPage>

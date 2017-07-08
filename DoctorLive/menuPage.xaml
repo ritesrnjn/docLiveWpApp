@@ -1,0 +1,111 @@
+﻿<phone:PhoneApplicationPage x:Class="DoctorLive.menuPage"
+                            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                            xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+                            xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+                            xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                            mc:Ignorable="d"
+                            FontFamily="{StaticResource PhoneFontFamilyNormal}"
+                            FontSize="{StaticResource PhoneFontSizeNormal}"
+                            Foreground="{StaticResource PhoneForegroundBrush}"
+                            SupportedOrientations="Portrait"
+                            Orientation="Portrait"
+                            shell:SystemTray.IsVisible="False">
+
+    <!--LayoutRoot contains the root grid where all other page content is placed-->
+    <Grid x:Name="LayoutRoot">
+        <phone:Panorama Title="DoctorLive"
+                        Foreground="#FFC3C3C3">
+            <phone:Panorama.Background>
+                <ImageBrush ImageSource="/Assets/stethoscope-backgrounds-wallpapers.jpg" />
+            </phone:Panorama.Background>
+
+            <!--Panorama item one-->
+            <phone:PanoramaItem Header="page 1">
+                <Grid x:Name="page1Grid">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height=".5*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="img1"
+                            Grid.Row="0"
+                            Content="Emergency"
+                            FontSize="30"
+                            Grid.Column="0"
+                            BorderThickness="0"
+                            Background="#FFC6388C"
+                            Opacity="0.75"
+                            Click="img1_Click"></Button>
+                    <Button x:Name="img2"
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            Content="Profile"
+                            FontSize="30"
+                            Background="#FF71B9F2"
+                            BorderThickness="0"
+                            Opacity="0.75"
+                            Click="img2_Click"></Button>
+                    <Button x:Name="img3"
+                            Grid.Row="1"
+                            Content="Casesheet"
+                            FontSize="30"
+                            Grid.Column="0"
+                            Background="#FFC3D50B"
+                            BorderThickness="0"
+                            Opacity="0.75"
+                            Click="img3_Click"></Button>
+                    <Button x:Name="img4"
+                            Grid.Row="1"
+                            Content="Prescription"
+                            FontSize="30"
+                            Grid.Column="1"
+                            Background="#FFF37710"
+                            BorderThickness="0"
+                            Opacity="0.75"
+                            Click="img4_Click"></Button>
+                </Grid>
+            </phone:PanoramaItem>
+
+            <!--Panorama item two-->
+            <phone:PanoramaItem Header="item2">
+                <Grid>
+                    <StackPanel x:Name="page2Stack">
+                        <Button x:Name="appontment"
+                                Content="Appointment"
+                                FontSize="40"
+                                Height="129"
+                                Background="#FF3C2759"
+                                BorderThickness="0"
+                                Opacity="0.75"
+                                Click="appontment_Click"></Button>
+                        <Button x:Name="item2"
+                                Content="Health Tips"
+                                FontSize="40"
+                                Height="129"
+                                Background="#FFDC4733"
+                                BorderThickness="0"
+                                Opacity="0.75"
+                                Click="item2_Click"></Button>
+                        <Button x:Name="item3"
+                                Content="Show My Id"
+                                FontSize="40"
+                                Height="129"
+                                Background="#FF1066E7"
+                                BorderThickness="0"
+                                Opacity="0.75"
+                                Click="item3_Click"></Button>
+                        
+                        
+                    </StackPanel>
+                </Grid>
+            </phone:PanoramaItem>
+        </phone:Panorama>
+    </Grid>
+
+</phone:PhoneApplicationPage>

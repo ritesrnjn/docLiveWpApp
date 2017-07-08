@@ -1,0 +1,96 @@
+﻿<phone:PhoneApplicationPage x:Class="DoctorLive.Page2"
+                            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                            xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+                            xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+                            xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                            FontFamily="{StaticResource PhoneFontFamilyNormal}"
+                            FontSize="{StaticResource PhoneFontSizeNormal}"
+                            Foreground="{StaticResource PhoneForegroundBrush}"
+                            SupportedOrientations="Portrait"
+                            Orientation="Portrait"
+                            mc:Ignorable="d"
+                            shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot"
+          Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel Grid.Row="0"
+                    Margin="12,17,0,28">
+            <TextBlock Style="{StaticResource PhoneTextNormalStyle}" />
+            <TextBlock Text="DoctorLive"
+                       Margin="9,-7,0,0"
+                       Style="{StaticResource PhoneTextTitle1Style}" />
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="LoginButtons"
+              Margin="12,3,12,-3"
+              Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*" />
+                <RowDefinition Height="4*" />
+            </Grid.RowDefinitions>
+
+            <StackPanel HorizontalAlignment="Center"
+                        Grid.Row="1"
+                        Width="456">
+                <Button x:Name="fbButton"
+                        Content="Facebook"
+                        HorizontalAlignment="Left"
+                        Height="88"
+                        Width="456"
+                        Margin="1,0,-1,0"
+                        BorderThickness="0"
+                        Foreground="White"
+                        Background="#3B5998"
+                        Opacity="0.85"
+                        Click="fbButton_Click" />
+                <Button x:Name="googleButton"
+                        Content="Google"
+                        HorizontalAlignment="Left"
+                        Height="88"
+                        Width="456"
+                        Margin="1,0,-1,0"
+                        Background="#DF4A32"
+                        Opacity="0.85"
+                        BorderThickness="0"
+                        Click="googleButton_Click" />
+                <Button x:Name="twitterButton"
+                        Content="Twitter"
+                        HorizontalAlignment="Left"
+                        Height="88"
+                        Width="456"
+                        Margin="1,0,-1,0"
+                        Background="#52A7E7"
+                        BorderThickness="0"
+                        Opacity="0.85"
+                        Click="twitterButton_Click" />
+                <Button x:Name="msButton"
+                        Content="Microsoft"
+                        HorizontalAlignment="Left"
+                        Height="88"
+                        Width="456"
+                        Margin="1,0,-1,0"
+                        Background="#FF66169E"
+                        Opacity="0.85"
+                        BorderThickness="0"
+                        Click="msButton_Click" />
+
+            </StackPanel>
+
+
+        </Grid>
+
+
+
+    </Grid>
+
+</phone:PhoneApplicationPage>

@@ -1,0 +1,95 @@
+﻿<phone:PhoneApplicationPage x:Class="DoctorLive.PrescriptionPage"
+                            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                            xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+                            xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+                            xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                            FontFamily="{StaticResource PhoneFontFamilyNormal}"
+                            FontSize="{StaticResource PhoneFontSizeNormal}"
+                            Foreground="{StaticResource PhoneForegroundBrush}"
+                            SupportedOrientations="Portrait"
+                            Orientation="Portrait"
+                            mc:Ignorable="d"
+                            shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot">
+        <Grid.Background>
+            <ImageBrush Stretch="UniformToFill"
+                        ImageSource="/Assets/asdasd.jpg" />
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel Grid.Row="0"
+                    Margin="12,17,0,28">
+            <TextBlock Text="DoctorLive"
+                       Style="{StaticResource PhoneTextNormalStyle}" />
+            <TextBlock Text="Prescription"
+                       Margin="9,-7,0,0"
+                       Style="{StaticResource PhoneTextTitle1Style}" />
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel"
+              Grid.Row="1"
+              Margin="12,0,12,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height=".5*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height=".75*" />
+            </Grid.RowDefinitions>
+            <StackPanel x:Name="Display"
+                        Grid.Row="0"
+                        Orientation="Horizontal"
+                        HorizontalAlignment="Right">
+                <TextBlock  x:Name="Welcome"
+                            Text="Hii"
+                            FontSize="30"></TextBlock>
+                <TextBlock x:Name="nameDisplay"
+                           Text="Guest"
+                           FontSize="30"
+                           Margin="15,0"></TextBlock>
+
+            </StackPanel>
+            <Button x:Name="Med"
+                    Grid.Row="1"
+                    BorderThickness="0,0,0,0"
+                    Content="My Medicines"
+                    FontSize="30"
+                    Opacity="0.75"
+                    Background="#FFC3D50B"
+                    Click="Med_Click"></Button>
+            <Grid x:Name="tests"
+                  Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+                <Button x:Name="Tests"
+                        Content="Tests"
+                        Grid.Column="0"
+                        FontSize="30"
+                        BorderThickness="0,0,0,0"
+                        Background="#FFC6388C"
+                        Opacity="0.75"
+                        Click="Tests_Click"></Button>
+                <Button x:Name="Tests1"
+                        Grid.Column="1"
+                        FontSize="30"
+                        Content="Suggestions"
+                        BorderThickness="0,0,0,0"
+                        Background="#FFF37710"
+                        Opacity="0.75"
+                        Click="Tests1_Click" />
+            </Grid>
+
+        </Grid>
+    </Grid>
+
+</phone:PhoneApplicationPage>
